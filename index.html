@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Manipulating the DOM</title>
+  <!-- Load Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+  <header class="page__header">
+    <nav class="navbar__menu">
+      <!-- Navigation starts as empty UL that will be populated with JS -->
+      <ul id="navbar__list"></ul>
+    </nav>
+  </header>
+  <main>
+    <header class="main__hero">
+       <p>
+           <span class="intro">Hello I'm</span>
+           <span class="intro-2" id="who-i-am"></span><span class="intro-2"> |</span>
+       </p>
+    </header>
+    <!-- Each Section has an ID (used for the anchor) and 
+    a data attribute that will populate the li node.
+    Adding more sections will automatically populate nav.
+    the first section will be active when our scroll offset is equal to section offset
+    -->
+    <section id="section1" data-nav="About">
+      <div class="landing__container">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <div class="about-left">
+                <p>It won’t be a bigger problem to find one video game lover in your neighbor. Since the introduction of Virtual Game, it has been achieving great heights so far as its popularity and technological advancement are concerned. The history of video game is as interesting as a fairy tale.</p>
+            </div>
+            <div class="about-right">
+                <img src="images/bg-3.a50d65f5.jpg" alt="avatar" class="about-img"/>
+                <div class="desc">
+                    <p><span class=""></span> (012) +88 017 635 9754</p>
+                    <p><span class=""></span> tonnie_johnson@gmail.com</p>
+                    <a class="desc-btn" href="">Send Me a Message</a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <section id="section2" data-nav="Features">
+      <div class="landing__container">
+        <h2>Some Features that Made us Unique</h2>
+          <div class="cards">
+              <div class="card">
+                  <div class="">
+                      <div class="">
+                          <h4><a href="#">Expert Technicians</a></h4>
+                      </div>
+                      <p>
+                          Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+                      </p>
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="">
+                      <div class="">
+                          <h4><a href="#">Professional Service</a></h4>
+                      </div>
+                      <p>
+                          Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+                      </p>
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="">
+                      <div class="">
+                          <h4><a href="#">Technical Skills</a></h4>
+                      </div>
+                      <p>
+                          Usage of the Internet is becoming more common due to rapid advancement of technology and power.
+                      </p>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+    </section>
+    <section id="section3" data-nav="Contact">
+      <div class="landing__container">
+        <h2>Contact</h2>
+        <form id="contact-form">
+            <input name="name" type="text" placeholder="Enter your name" class="input-control" required/>
+            <input name="email" type="email" placeholder="Enter your email" class="input-control" required/>
+            <input name="subject" type="text" placeholder="Subject" class="input-control" required/>
+            <textarea name="message" placeholder="Message..." class="input-control" required></textarea>
+            <input type="submit" value="Send"/>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="page__footer">
+    <p>&copy Udacity</p>
+    <ul class="social-links">
+       <li><a target="_blank" href="">facebook</a></li>
+       <li><a target="_blank" href="">linkedIn</a></li>
+       <li><a target="_blank" href="">codeforces</a></li>
+       <li><a target="_blank" href="">github</a></li>
+    </ul>
+    <div class="clearfix"></div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -219,6 +219,18 @@ section {
     }
 }
 
+/* Services Styles */
+.services-cards-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.services-cards span {
+    color:black !important;
+    font-size: 25px;
+    display: block;
+    margin: 10px 0;
+}
 
 /* Footer Styles */
 .page__footer {

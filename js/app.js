@@ -2,6 +2,7 @@
 /* global vars */
 const navigation = document.getElementById("navbar__list");
 const __sections = document.querySelectorAll('[data-nav]');
+let timer = null;
 
 /**
  *  @description adding nav items
@@ -69,6 +70,8 @@ const addSmoothScroll = (target) => {
  **/
 const addScrollEventNav = () => {
     const cash = () => {
+        const header = document.getElementsByClassName('page__header')[0];
+        header.style.position = 'absolute';
         const windowCurrentTop = window.scrollY;
         for(let section of __sections){
             section.classList.remove('your-active-class');
@@ -87,6 +90,14 @@ const addScrollEventNav = () => {
                 document.querySelector(`[data-nav='${href}'`).classList.add("your-active-class");
             }
         }
+
+        if(timer !== null) {
+            clearTimeout(timer);
+            timer = null;
+        }
+        timer = setTimeout(() => {
+            header.style.position = 'fixed';
+        }, 700);
     };
 
     window.addEventListener('scroll', cash);

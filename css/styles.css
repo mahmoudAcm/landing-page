@@ -119,6 +119,7 @@ section {
     top: 0;
     width: 100%;
     z-index: 5;
+    transition: 1s;
 }
 
 /* about me */
